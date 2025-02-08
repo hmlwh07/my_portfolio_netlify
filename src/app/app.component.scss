@@ -1,0 +1,21 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.section {
+    height: 100vh;
+    padding: 50px;
+}
+.section-for-about {
+    padding: 50px;
+    min-height: 100vh;
+}
+
+.navbar .nav-link.active {
+    font-weight: bold;
+    color: rgb(77, 133, 133) !important;
+}
+
+#home, #skills, #contact {
+    background-color: #c8eeee;
+}

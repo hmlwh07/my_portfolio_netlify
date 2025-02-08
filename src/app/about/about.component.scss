@@ -1,0 +1,54 @@
+.circle-frame {
+    height: 16rem;
+    width: 16rem;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+
+.h-100vh {
+    height: 100vh;
+}
+
+/* Slide-in from left animation */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        /* Start off-screen from the left */
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        /* End at the normal position */
+        opacity: 1;
+    }
+}
+
+/* Slide-in from right animation */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        /* Start off-screen from the right */
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        /* End at the normal position */
+        opacity: 1;
+    }
+}
+
+/* Apply the slide-in from left animation */
+.slide-in-left {
+    animation: slideInLeft 1s ease-out forwards;
+    opacity: 0;
+}
+
+/* Apply the slide-in from right animation with a delay */
+.slide-in-right {
+    animation: slideInRight 1s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.5s;
+    /* Delay the right column's animation */
+}

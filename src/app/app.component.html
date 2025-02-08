@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg bg-light fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" [class.active]="activeSection === 'home'" (click)="scrollToSection('home')">My Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="activeSection === 'home'" (click)="scrollToSection('home')">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="activeSection === 'about'" (click)="scrollToSection('about')">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="activeSection === 'skills'" (click)="scrollToSection('skills')">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="activeSection === 'mini-games'" (click)="scrollToSection('mini-games')">Mini Games</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="activeSection === 'contact'" (click)="scrollToSection('contact')">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Sections -->
+<div id="home" class="section"> 
+  <app-home></app-home> 
+</div>
+<div id="about" class="section-for-about"> 
+  <app-about></app-about> 
+</div>
+<div id="skills" class="section"> 
+  <app-skills></app-skills> 
+</div>
+<div id="mini-games" class="section"> 
+  <app-mini-games></app-mini-games> 
+</div>
+<div id="contact" class="section"> 
+  <app-contact></app-contact> 
+</div>

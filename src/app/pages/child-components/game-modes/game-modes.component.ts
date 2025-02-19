@@ -1,6 +1,6 @@
 import { Component, Renderer2 } from '@angular/core';
 import { GameService } from '../../../service/game.service';
-import { CommonModule } from '@angular/common';
+import { CommonModule, Location } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -17,7 +17,7 @@ export class GameModesComponent {
   mode: string = 'easy';
   choices: number = 3;
 
-  constructor(private service: GameService,private renderer:Renderer2) {
+  constructor(private service: GameService,private renderer:Renderer2, private location: Location) {
   }
 
   ngOnInit(){
@@ -59,6 +59,10 @@ export class GameModesComponent {
     } else {
       this.colorMatch = null;
     }
+  }
+
+  goBack(){
+    this.location.back();
   }
 
 }

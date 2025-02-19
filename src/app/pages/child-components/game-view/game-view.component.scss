@@ -5,6 +5,10 @@
     transform: translateY(8rem);
 }
 
+.outer-container {
+    height: 100vh;
+}
+
 @media screen and (min-width: 900px) {
     .color-code {
 
@@ -163,5 +167,16 @@
         display: block;
         top: 20%;
         left: 35%;
+    }
+}
+
+.back-container {
+    justify-content: center;
+    padding-top: 4px;
+    display: flex;
+    padding-right: 24rem;
+
+    img {
+        width: 72px;
     }
 }

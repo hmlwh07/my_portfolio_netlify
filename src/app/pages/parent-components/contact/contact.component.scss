@@ -37,6 +37,6 @@ ul, li {
     color: green;
 }
 
-li:hover {
+li:hover, li>a:hover {
     color: #4D8585;
 }

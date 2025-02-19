@@ -21,4 +21,8 @@ export class GameViewComponent {
     }
   }
 
+  goBack(){
+    this.router.navigate(['/start-game']);
+  }
+
 }

@@ -25,13 +25,23 @@
 .container {
     justify-content: center;
     display: flex;
+}
+
+.outer-container {
+    justify-content: center;
+    display: flex;
+    height: 100vh;
+}
+
+.color-box-container {
     transform: translateY(8rem);
 }
 
 #message-box{
     height: 80px;
     position: relative;
-    transform: translateY(4rem);
+    transform: translateY(3rem);
+    background-color: rgba(199, 202, 202, 0.7);
 }
 
 .colorRow {
@@ -53,4 +63,13 @@
     font-size: xx-large;
     background-color: rgba(202, 201, 199, 0.7);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.368);
+}
+
+.back-container {
+    justify-content: start;
+    padding-top: 4px;
+
+    img {
+        width: 72px;
+    }
 }

@@ -1,14 +1,15 @@
 import { Component, HostListener } from '@angular/core';
-import { Router, RouterOutlet } from '@angular/router';
-import { HomeComponent } from "./home/home.component";
-import { AboutComponent } from "./about/about.component";
-import { SkillsComponent } from "./skills/skills.component";
-import { MiniGamesComponent } from './mini-games/mini-games.component';
-import { ContactComponent } from './contact/contact.component';
+import { Router, RouterModule, RouterOutlet } from '@angular/router';
+import { AboutComponent } from './pages/parent-components/about/about.component';
+import { ContactComponent } from './pages/parent-components/contact/contact.component';
+import { HomeComponent } from './pages/parent-components/home/home.component';
+import { MiniGamesComponent } from './pages/parent-components/mini-games/mini-games.component';
+import { SkillsComponent } from './pages/parent-components/skills/skills.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [HomeComponent, AboutComponent, SkillsComponent, MiniGamesComponent, ContactComponent],
+  imports: [RouterModule, CommonModule, HomeComponent, AboutComponent, SkillsComponent, MiniGamesComponent, ContactComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -38,5 +39,9 @@ export class AppComponent {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+  }
+
+  isGameRoute() {
+    return this.router.url === '/start-game' || this.router.url === '/game-view' || this.router.url === '/game-modes';
   }
 }

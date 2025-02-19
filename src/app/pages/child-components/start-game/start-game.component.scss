@@ -1,0 +1,351 @@
+
+/*Background Style*/
+
+.orange {
+    color: #c97b1a;
+}
+
+.green {
+    color: #2ab072;
+}
+
+.pink {
+    color: #f5517a;
+}
+
+.yellow {
+    color: #fffb0d;
+}
+
+.blue {
+    color: #0fd5d9;
+}
+
+.violet {
+    color: #931ed6;
+}
+
+#game-name {
+    text-align: center;
+    position: relative;
+}
+
+#game-name>h1 {
+    display: inline;
+    margin: 0;
+    font-family: 'Kablammo', cursive;
+    font-size: 100px;
+    font-weight: bold;
+    text-shadow: 5px 3px #4e555b;
+
+}
+
+#game-name>p {
+    font-family: var(--font);
+    font-size: 30px;
+    color: var(--gray);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 3px 3px #1e7e34;
+    text-align: center;
+    margin: 0;
+}
+
+.play-btn {
+    width: 150px;
+    height: 50px;
+    margin: 0;
+}
+
+.loader {
+    height: 20px;
+    width: 250px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.loader--dot {
+    animation-name: loader;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    background-color: black;
+    position: absolute;
+    border: 2px solid white;
+}
+
+.loader--dot:first-child {
+    background-color: #8cc759;
+    animation-delay: 0.5s;
+}
+
+.loader--dot:nth-child(2) {
+    background-color: #8c6daf;
+    animation-delay: 0.4s;
+}
+
+.loader--dot:nth-child(3) {
+    background-color: #ef5d74;
+    animation-delay: 0.3s;
+}
+
+.loader--dot:nth-child(4) {
+    background-color: #f9a74b;
+    animation-delay: 0.2s;
+}
+
+.loader--dot:nth-child(5) {
+    background-color: #60beeb;
+    animation-delay: 0.1s;
+}
+
+.loader--dot:nth-child(6) {
+    background-color: #fbef5a;
+    animation-delay: 0s;
+}
+
+.loader--text {
+    position: absolute;
+    top: 200%;
+    left: 0;
+    right: 0;
+    width: 4rem;
+    margin: auto;
+}
+
+.loader--text:after {
+    content: "Loading";
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+    animation-name: loading-text;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loader {
+    15% {
+        transform: translateX(0);
+    }
+
+    45% {
+        transform: translateX(230px);
+    }
+
+    65% {
+        transform: translateX(230px);
+    }
+
+    95% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes loading-text {
+    0% {
+        content: "Loading";
+    }
+
+    25% {
+        content: "Loading.";
+    }
+
+    50% {
+        content: "Loading..";
+    }
+
+    75% {
+        content: "Loading...";
+    }
+}
+
+/*Loading Css End*/
+.text-color {
+    position: relative;
+
+}
+
+@media screen and (min-width: 900px) {
+    .color-code {
+
+        width: 500px;
+        height: 200px;
+    }
+
+    .text-content {
+        font-family: 'Permanent Marker', cursive;
+        position: absolute;
+        top: 55%;
+        left: 42%;
+        font-size: 30px;
+        font-weight: bold;
+        text-shadow: 2px 2px #0fd5d9;
+    }
+
+    .btn-img {
+        width: 500px;
+        height: 400px;
+    }
+
+    .home {
+        position: absolute;
+        display: block;
+        top: 65%;
+        left: 42%;
+    }
+
+    .hard {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 42%;
+    }
+
+    .normal {
+        position: absolute;
+        display: block;
+        top: 35%;
+        left: 42%;
+    }
+
+    .easy {
+        position: absolute;
+        display: block;
+        top: 20%;
+        left: 42%;
+    }
+
+}
+
+@media screen and (min-width: 800px) and (max-width: 1190px) {
+    .color-code {
+        margin: 0;
+        width: 500px;
+        height: 200px;
+    }
+
+    .text-content {
+        font-family: 'Permanent Marker', cursive;
+        position: absolute;
+        top: 55%;
+        left: 40%;
+        font-size: 30px;
+        font-weight: bold;
+        text-shadow: 2px 2px #0fd5d9;
+    }
+
+    .btn-img {
+        width: 500px;
+        height: 400px;
+    }
+
+    .home {
+        position: absolute;
+        display: block;
+        top: 65%;
+        left: 38%;
+    }
+
+    .hard {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 38%;
+    }
+
+    .normal {
+        position: absolute;
+        display: block;
+        top: 35%;
+        left: 38%;
+    }
+
+    .easy {
+        position: absolute;
+        display: block;
+        top: 20%;
+        left: 38%;
+    }
+
+
+
+}
+
+@media screen and (min-width: 300px) and (max-width: 800px) {
+    .color-code {
+        margin: 0;
+        width: 400px;
+        height: 200px;
+    }
+
+    .text-content {
+        font-family: 'Permanent Marker', cursive;
+        position: absolute;
+        top: 55%;
+        left: 30%;
+        font-size: 30px;
+        font-weight: bold;
+        text-shadow: 2px 2px #0fd5d9;
+    }
+
+    .set-bar {
+        margin-bottom: 50px;
+    }
+
+    .btn-img {
+        width: 500px;
+        height: 500px;
+    }
+
+    .home {
+        position: absolute;
+        display: block;
+        top: 65%;
+        left: 35%;
+    }
+
+    .hard {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 35%;
+    }
+
+    .normal {
+        position: absolute;
+        display: block;
+        top: 35%;
+        left: 35%;
+    }
+
+    .easy {
+        position: absolute;
+        display: block;
+        top: 20%;
+        left: 35%;
+    }
+}
+
+.setting {
+    width: 150px;
+    height: 100px;
+}
+
+/*Music PNG CSS*/
+.setting {
+    width: 70px;
+    height: 70px;
+}
+
+.modal-content {
+    background-color: darksalmon;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(5, 5, 5);
+}

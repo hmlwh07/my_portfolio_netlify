@@ -1,0 +1,56 @@
+#quesBG {
+    width: 500px !important;
+    height: 200px;    
+    margin: 0 auto;
+}
+
+.question-overlay {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    padding: 10px;
+    border-radius: 5px;
+    width: 80%;
+    text-align: center;
+    color: #b132af;
+    font-size: xx-large;
+}
+
+#play-game {
+    position: relative;
+    transform: translateY(6rem);
+}
+
+.container {
+    justify-content: center;
+    display: flex;
+    transform: translateY(8rem);
+}
+
+#message-box{
+    height: 80px;
+    position: relative;
+    transform: translateY(4rem);
+}
+
+.colorRow {
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    border: 2px solid deepskyblue;
+}
+
+#congratulations-message {
+    position: absolute;
+    top: 55%;
+    left: 56%;
+    transform: translate(-60%, -30%);
+    padding: 10px;
+    border-radius: 15px;
+    /* width: 80%; */
+    text-align: center;
+    font-size: xx-large;
+    background-color: rgba(202, 201, 199, 0.7);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.368);
+}

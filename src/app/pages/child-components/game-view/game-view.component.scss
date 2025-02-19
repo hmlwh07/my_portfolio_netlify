@@ -1,0 +1,167 @@
+/*Button Game */
+#button-game {
+    text-align: center;
+    position: relative;
+    transform: translateY(8rem);
+}
+
+@media screen and (min-width: 900px) {
+    .color-code {
+
+        width: 500px;
+        height: 200px;
+    }
+
+    .text-content {
+        font-family: 'Permanent Marker', cursive;
+        position: absolute;
+        top: 55%;
+        left: 42%;
+        font-size: 30px;
+        font-weight: bold;
+        text-shadow: 2px 2px #0fd5d9;
+    }
+
+    .btn-img {
+        width: 500px;
+        height: 400px;
+    }
+
+    .home {
+        position: absolute;
+        display: block;
+        top: 65%;
+        left: 42%;
+    }
+
+    .hard {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 42%;
+    }
+
+    .normal {
+        position: absolute;
+        display: block;
+        top: 35%;
+        left: 42%;
+    }
+
+    .easy {
+        position: absolute;
+        display: block;
+        top: 20%;
+        left: 42%;
+    }
+
+}
+
+@media screen and (min-width: 800px) and (max-width: 1190px) {
+    .color-code {
+        margin: 0;
+        width: 500px;
+        height: 200px;
+    }
+
+    .text-content {
+        font-family: 'Permanent Marker', cursive;
+        position: absolute;
+        top: 55%;
+        left: 40%;
+        font-size: 30px;
+        font-weight: bold;
+        text-shadow: 2px 2px #0fd5d9;
+    }
+
+    .btn-img {
+        width: 500px;
+        height: 400px;
+    }
+
+    .home {
+        position: absolute;
+        display: block;
+        top: 65%;
+        left: 38%;
+    }
+
+    .hard {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 38%;
+    }
+
+    .normal {
+        position: absolute;
+        display: block;
+        top: 35%;
+        left: 38%;
+    }
+
+    .easy {
+        position: absolute;
+        display: block;
+        top: 20%;
+        left: 38%;
+    }
+
+
+
+}
+
+@media screen and (min-width: 300px) and (max-width: 800px) {
+    .color-code {
+        margin: 0;
+        width: 400px;
+        height: 200px;
+    }
+
+    .text-content {
+        font-family: 'Permanent Marker', cursive;
+        position: absolute;
+        top: 55%;
+        left: 30%;
+        font-size: 30px;
+        font-weight: bold;
+        text-shadow: 2px 2px #0fd5d9;
+    }
+
+    .set-bar {
+        margin-bottom: 50px;
+    }
+
+    .btn-img {
+        width: 500px;
+        height: 500px;
+    }
+
+    .home {
+        position: absolute;
+        display: block;
+        top: 65%;
+        left: 35%;
+    }
+
+    .hard {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 35%;
+    }
+
+    .normal {
+        position: absolute;
+        display: block;
+        top: 35%;
+        left: 35%;
+    }
+
+    .easy {
+        position: absolute;
+        display: block;
+        top: 20%;
+        left: 35%;
+    }
+}

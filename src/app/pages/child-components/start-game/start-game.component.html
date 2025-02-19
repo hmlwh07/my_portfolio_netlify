@@ -1,0 +1,96 @@
+<!-- background-sound.component.html -->
+<audio #backgroundAudio loop>
+    <source src="/assets/music/happy-and-cute-162573.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<div class="container d-flex justify-content-between set-bar mt-4 pt-5">
+    <img class="setting" src="/assets/image/sound-on.png" id="play" (click)="toggleSound(false)"
+        [hidden]="audio?.paused" alt="">
+    <img class="setting" src="/assets/image/sound-off.png" id="pause" (click)="toggleSound(true)"
+        [hidden]="!audio?.paused" alt="">
+    <img class="setting" src="/assets/image/menu.png" id="play-home" data-bs-target="#exampleModalToggle"
+        data-bs-toggle="modal" data-bs-dismiss="modal" alt="">
+</div>
+
+
+<!--Modal Start-->
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 offset-4" id="exampleModalToggleLabel">About Game</h1>
+                <button type="button" class="btn-close mx-end" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body mx-auto">
+                "Play a fun RGB color guessing game! The model generates a random color using RGB values, and you have
+                to guess the correct color. Input your guesses in the format 'R G B' and the model will provide hints if
+                your guess is incorrect. Keep trying until you guess the color correctly!"
+            </div>
+            <div class="modal-footer mx-auto">
+                <button (click)="go('home')" class="btn btn-danger" type="submit">
+                    Home
+                </button>
+                <button (click)="go('game-view')" class="btn btn-warning mx-3" type="submit">
+                    Start Game
+                </button>
+                <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">
+                    Next
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 offset-4" id="exampleModalToggleLabel2">Color Theory</h1>
+                <button type="button" class="btn-close mx-end" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body mx-auto">
+                RGB color theory is a fundamental concept in digital color representation. It revolves around the
+                additive mixture of red, green, and blue light at varying intensities to create a wide range of colors.
+                By combining different levels of these primary colors, RGB color theory forms the basis for how
+                electronic displays, such as monitors and screens, render colors accurately and produce the vibrant
+                visuals we perceive.
+            </div>
+            <div class="modal-footer mx-auto">
+                <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">
+                    Back
+                </button>
+                <button id="homeButton" (click)="go('home')" class="btn btn-danger mx-3" type="submit">
+                    Home
+                </button>
+                <button (click)="go('game-view')" class="btn btn-warning" type="submit">
+                    Start Game
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="mt-md-4" id="game-name">
+    <h1 class="orange">C</h1>
+    <h1 class="green">O</h1>
+    <h1 class="pink">L</h1>
+    <h1 class="yellow">O</h1>
+    <h1 class="blue">U</h1>
+    <h1 class="violet">R</h1>
+    <p class="p-3 fw-bold m-3 text-danger">Adventure</p>
+    <img src="../../assets/image/play.png" class="play-btn" id="playGame" alt="" (click)="playGame();">
+</section>
+
+<div class='container d-none' id="loading">
+    <div class='loader'>
+        <div class='loader--dot'></div>
+        <div class='loader--dot'></div>
+        <div class='loader--dot'></div>
+        <div class='loader--dot'></div>
+        <div class='loader--dot'></div>
+        <div class='loader--dot'></div>
+        <div class='loader--text'></div>
+    </div>
+</div>

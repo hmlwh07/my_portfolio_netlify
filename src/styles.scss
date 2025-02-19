@@ -7,3 +7,54 @@
 .border-bottom-green {
     border-bottom: 1px solid #4D8585;
 }
+
+.img-container {
+    background-image: url('assets/images/my_pf.jpeg');
+    background-size: cover;
+}
+
+// .pt-4 {
+//     padding-top: 4rem;
+// }
+
+/* Add these responsive adjustments */
+@media screen and (max-height: 667px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.875rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .hexagon-frame {
+        width: 200px;
+        /* Reduce size on smaller screens */
+        height: 200px;
+    }
+
+    .circle-frame {
+        width: 200px;
+        /* Reduce size on smaller screens */
+        height: 200px;
+    }
+
+    .py-4 {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+
+    .min-vh-100 {
+        min-height: calc(100vh - 56px) !important;
+        /* Account for navbar */
+    }
+}

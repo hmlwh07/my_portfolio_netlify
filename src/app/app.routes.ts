@@ -10,7 +10,7 @@ import { GameModesComponent } from './pages/child-components/game-modes/game-mod
 
 
 export const routes: Routes = [
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
     { path: 'about', component: AboutComponent },
     { path: 'skills', component: SkillsComponent },

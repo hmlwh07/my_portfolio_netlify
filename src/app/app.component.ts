@@ -6,6 +6,7 @@ import { HomeComponent } from './pages/parent-components/home/home.component';
 import { MiniGamesComponent } from './pages/parent-components/mini-games/mini-games.component';
 import { SkillsComponent } from './pages/parent-components/skills/skills.component';
 import { CommonModule } from '@angular/common';
+import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-root',
@@ -15,8 +16,25 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   activeSection: string = 'home';
+  sections = [
+    { id: 'home', name: 'Home' },
+    { id: 'about', name: 'About' },
+    { id: 'skills', name: 'Skills' },
+    { id: 'mini-games', name: 'Mini Games' },
+    { id: 'contact', name: 'Contact' }
+  ];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+    // Get the current route path
+    const currentPath = window.location.pathname.substring(1); // Remove leading slash
+    if (currentPath && this.sections.some(section => section.id === currentPath)) {
+      this.activeSection = currentPath;
+      // Scroll to the correct section after a short delay to ensure DOM is ready
+      setTimeout(() => {
+        this.scrollToSection(currentPath);
+      }, 100);
+    }
+  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -27,6 +45,7 @@ export class AppComponent {
         const rect = element.getBoundingClientRect();
         if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
           this.activeSection = section;
+          console.log(section);
           this.router.navigateByUrl(section);
           break;
         }
@@ -38,6 +57,7 @@ export class AppComponent {
     const element = document.getElementById(section);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      this.activeSection = section;
     }
   }
 

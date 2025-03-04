@@ -1,11 +1,11 @@
 <div class="container px-3 py-5 h-100vh align-content-center border-bottom">
     <div class="row justify-content-center align-items-center min-vh-100">
-        <div class="col-sm-12 col-md-8 col-lg-6 py-4 d-flex align-items-center justify-content-center mb-4 mb-lg-0">
+        <div class="col-sm-12 col-md-8 col-lg-6 py-4 d-flex align-items-center justify-content-center mb-4 mb-lg-0" [class.slide-in-left]="isActive">
             <div>
                 <img class="creative-frame" src="../../assets/gif/creative.gif" alt="Profile">
             </div>
         </div>
-        <div class="col-sm-12 col-md-8 col-lg-6 align-content-center slide-in-right">
+        <div class="col-sm-12 col-md-8 col-lg-6 align-content-center" [class.slide-in-right]="isActive">
             <article>
                 <h4>About Me</h4>
                 <h3>Web & Mobile Developer</h3>

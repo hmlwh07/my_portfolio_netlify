@@ -32,8 +32,8 @@ export class HomeComponent {
 
   downloadCV() {
     const link = document.createElement('a');
-    link.href = 'assets/pdf/my_cv.pdf';
-    link.download = 'Hayman_Lawon_Htet_CV.pdf';
+    link.href = 'assets/pdf/HaymanLawonHtet-AngularDeveloper.pdf';
+    link.download = 'HaymanLawonHtet-AngularDeveloper.pdf';
     link.click();
   }
 

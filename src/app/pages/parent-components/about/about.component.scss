@@ -8,9 +8,32 @@
 .creative-frame {
     width: 20rem;
 }
-// .h-100vh {
-//     height: 100vh;
-// }
+
+.card {
+    background-color: #c8eeee;
+    min-height: 240px;
+    max-height: 336px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    img {
+        height: 144px;
+        object-fit: contain;
+    }
+
+    .card-text {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* Ensure at least 2 lines are visible */
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        line-height: 1.5; /* Adjust line height for better readability */
+        max-height: calc(1.5em * 3); /* Ensures two lines are displayed */
+    }
+}
+
+.card:hover {
+    border-color: #4D8585;
+}
 
 /* Slide-in from left animation */
 @keyframes slideInLeft {
@@ -42,16 +65,33 @@
     }
 }
 
-/* Apply the slide-in from left animation */
-.slide-in-left {
-    animation: slideInLeft 1s ease-out forwards;
+/* Apply the slide-in from right animation with sequential delays */
+.slide-in-right {
     opacity: 0;
+    animation: slideInRight 1s ease-out forwards;
 }
 
-/* Apply the slide-in from right animation with a delay */
-.slide-in-right {
-    animation: slideInRight 1s ease-out forwards;
-    opacity: 0;
-    animation-delay: 0.5s;
-    /* Delay the right column's animation */
+/* Add sequential delays for each card */
+.slide-in-right:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.slide-in-right:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.slide-in-right:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.slide-in-right:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.slide-in-right:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.slide-in-right:nth-child(6) {
+    animation-delay: 1.2s;
 }

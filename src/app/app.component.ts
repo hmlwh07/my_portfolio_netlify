@@ -62,6 +62,6 @@ export class AppComponent {
   }
 
   isGameRoute() {
-    return this.router.url === '/start-game' || this.router.url === '/game-view' || this.router.url === '/game-modes';
+    return this.router.url === '/start-game' || this.router.url === '/game-view' || this.router.url === '/game-modes' || this.router.url === '/math-game' || this.router.url === '/project-detail';
   }
 }

@@ -7,6 +7,8 @@ import { SkillsComponent } from './pages/parent-components/skills/skills.compone
 import { StartGameComponent } from './pages/child-components/start-game/start-game.component';
 import { GameViewComponent } from './pages/child-components/game-view/game-view.component';
 import { GameModesComponent } from './pages/child-components/game-modes/game-modes.component';
+import { MathGameComponent } from './pages/child-components/math-game/math-game.component';
+import { ProjectDetailsComponent } from './pages/child-components/project-details/project-details.component';
 
 
 export const routes: Routes = [
@@ -19,4 +21,7 @@ export const routes: Routes = [
     { path: 'start-game', component: StartGameComponent },
     { path: 'game-view', component: GameViewComponent },
     { path: 'game-modes', component: GameModesComponent },
+    { path: 'math-game', component: MathGameComponent },
+    { path: 'project-detail', component: ProjectDetailsComponent }
+    
 ];

@@ -1,21 +1,21 @@
-<div class="container px-3 py-5 h-100vh align-content-center border-bottom">
+<div class="container px-3 py-5 h-100vh align-content-center">
     <div class="row justify-content-center align-items-center min-vh-100">
-        <div class="col-sm-12 col-md-8 col-lg-6 py-4 d-flex align-items-center justify-content-center mb-4 mb-lg-0" [class.slide-in-left]="isActive">
-            <div>
-                <img class="creative-frame" src="../../assets/gif/creative.gif" alt="Profile">
+        @for (project of projects; track $index) {
+        <div class="col-sm-12 col-md-6 col-lg-4 py-4 d-flex align-items-center justify-content-center mb-4 mb-lg-0"
+            >
+            <div [class.slide-in-right]="isActive" class="card" (click)="goToProjectDetail(project)">
+                <img src="{{project.image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{project.title}}</h5>
+                    <p style="color: #463939;" class="card-text">{{project.description}}</p>
+                    <div class="d-flex flex-column align-items-end">
+                        <a style="color: #4D8585; font-size: 24px;" class="btn">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-sm-12 col-md-8 col-lg-6 align-content-center" [class.slide-in-right]="isActive">
-            <article>
-                <h4>About Me</h4>
-                <h3>Web & Mobile Developer</h3>
-                <p>
-                    Passionate and detail-oriented, with a strong background in building responsive and scalable solutions. Proficient in modern JavaScript frameworks, with expertise in secure data management, UI/UX design, and performance optimization.
-                </p>
-                <p>
-                    Experienced in collaborating with cross-functional teams to develop, test, and deploy efficient applications that enhance user engagement and business growth. Dedicated to continuous learning and innovation, staying updated with the latest technologies and best practices in web and mobile development. Always eager to explore new tools, improve development workflows, and create impactful digital solutions.
-                </p>
-            </article>
-        </div>
+    }
     </div>
 </div>

@@ -22,9 +22,11 @@ article {
 /* Container holding all skills */
 .skills-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 24px;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .skill-img {
@@ -36,9 +38,10 @@ article {
 /* Style for each skill */
 .skill {
     opacity: 0;
-    font-size: 24px;
+    font-size: 14px;
     font-weight: bold;
-    margin: 10px 0;
+    margin: 10px 12px;
+    padding: 0;
 }
 
 .active .skill {
@@ -59,6 +62,18 @@ article {
 
 .active .skill:nth-child(4) {
     animation-delay: 3s;
+}
+
+.active .skill:nth-child(5) {
+    animation-delay: 4s;
+}
+
+.active .skill:nth-child(6) {
+    animation-delay: 5s;
+}
+
+li:hover, li>a:hover {
+    color: #4D8585;
 }
 
 @keyframes fadeIn {

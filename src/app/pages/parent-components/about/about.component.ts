@@ -68,6 +68,18 @@ export class AboutComponent implements OnInit {
 
   constructor(private router: Router) {
     // Listen to route changes
+  }
+
+  goToProjectDetail(project: any) {
+    this.router.navigate(['/project-detail'], {
+      state: {
+        project: project
+      }
+    });
+    window.scrollTo(0, 0);
+  }
+
+  ngOnInit() {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: any) => {
@@ -85,17 +97,26 @@ export class AboutComponent implements OnInit {
         });
       }
     });
-  }
 
-  goToProjectDetail(project: any) {
-    this.router.navigate(['/project-detail'], {
-      state: {
-        project: project
-      }
-    });
-  }
-
-  ngOnInit() {
-
+    const project = history.state.project;
+    if (project) {
+      this.router.events.pipe(
+        filter(event => event instanceof NavigationEnd)
+      ).subscribe((event: any) => {
+        // Check if current route is about
+        this.isActive = event.url === '/about';
+        if (this.isActive) {
+          // Initialize isActiveArray with false values
+          this.isActiveArray = new Array(this.projects.length).fill(false);
+  
+          // Trigger animations with delay
+          this.projects.forEach((_, index) => {
+            setTimeout(() => {
+              this.isActiveArray[index] = true;
+            }, index * 500); // 200ms delay between each card
+          });
+        }
+      });
+    }
   }
 }

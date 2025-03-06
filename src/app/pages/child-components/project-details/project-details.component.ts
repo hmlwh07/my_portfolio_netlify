@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-project-details',
@@ -9,10 +10,17 @@ import { Component } from '@angular/core';
 export class ProjectDetailsComponent {
   project: any;
 
+  constructor(private router: Router) {}
+
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
-    window.scrollTo(0, 0);
     this.project = history.state.project;
+  }
+
+  goBack() {
+    this.router.navigate(['home'],{
+      replaceUrl: true
+    })
   }
 }

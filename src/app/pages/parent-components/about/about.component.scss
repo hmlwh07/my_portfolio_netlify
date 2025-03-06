@@ -10,6 +10,7 @@
 }
 
 .card {
+    padding: 8px;
     background-color: #c8eeee;
     min-height: 240px;
     max-height: 336px;
@@ -29,6 +30,10 @@
         line-height: 1.5; /* Adjust line height for better readability */
         max-height: calc(1.5em * 3); /* Ensures two lines are displayed */
     }
+
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.5s ease-out;
 }
 
 .card:hover {
@@ -67,8 +72,8 @@
 
 /* Apply the slide-in from right animation with sequential delays */
 .slide-in-right {
-    opacity: 0;
-    animation: slideInRight 1s ease-out forwards;
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /* Add sequential delays for each card */

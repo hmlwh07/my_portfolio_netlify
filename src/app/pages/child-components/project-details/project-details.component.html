@@ -16,26 +16,28 @@
 </div> -->
 
 <div class="container px-4 pb-3rem h-100vh align-content-end border-bottom">
-    <div class="row justify-content-center align-items-start">
-        @if (project.style === 'style_one') {
-        <div class="col-sm-12 col-md-8 col-lg-4 py-4 d-flex align-items-center justify-content-center mb-4 mb-lg-0">
-            <img src="{{project.image}}" class="card-img-top" alt="...">
+    @if (project.style === 'style_one') {
+        <div class="row justify-content-center align-items-start p-24">
+            <div class="col-sm-12 col-md-12 col-lg-12 py-4 d-flex align-items-center justify-content-center mb-4 mb-lg-0">
+                <img [style]="project.width" src="{{project.image}}" class="card-img-top" alt="...">
+            </div>
+            <div class="col-sm-12 col-md-8 col-lg-4 py-4 d-flex align-items-center justify-content-center mb-lg-0 detail-one-container-one">
+                <p  class="tab-text p-16">{{project.detail_a}} <br> {{project.detail_b}}</p>
+            </div>
+            <div class="col-sm-12 col-md-8 col-lg-4 py-4 d-flex align-items-center justify-content-center mb-4 mb-lg-0 detail-one-container-two">
+                <p class="tab-text p-16">{{project?.detail_c}}</p>
+            </div>
         </div>
-        <div class="col-sm-12 col-md-8 col-lg-4 py-4 d-flex align-items-center justify-content-center mb-lg-0 detail-one-container-one">
-            <p  class="tab-text p-16">{{project.detail_a}} <br> {{project.detail_b}}</p>
-        </div>
-        <div class="col-sm-12 col-md-8 col-lg-4 py-4 d-flex align-items-center justify-content-center mb-4 mb-lg-0 detail-one-container-two">
-            <p class="tab-text p-16">{{project?.detail_c}}</p>
-        </div>
-        }
-        @if (project.style === 'style_two') {
+    }
+    @if (project.style === 'style_two') {
+        <div class="row justify-content-center align-items-center p-24">
             <div class="col-sm-12 col-md-8 col-lg-8 py-4 d-flex flex-column align-items-center justify-content-center mb-lg-0">
                 <p class="tab-text detail-one-container-two br-4 mb-lg-0 p-16">{{project.detail_a}}</p>
                 <p class="tab-text detail-one-container-two br-4 p-16">{{project.detail_b}} <br> {{project?.detail_c}}</p>
             </div>
             <div class="col-sm-12 col-md-8 col-lg-4 py-4 d-flex align-items-center justify-content-center mb-4 mb-lg-0">
-                <img src="{{project.image}}" class="card-img-top" alt="...">
+                <img [style]="project.width" src="{{project.image}}" class="card-img-top" alt="...">
             </div>
-        }
-    </div>
+        </div>
+    }
 </div>

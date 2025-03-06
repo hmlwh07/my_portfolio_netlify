@@ -3,7 +3,7 @@
         @for (project of projects; track $index) {
         <div class="col-sm-12 col-md-6 col-lg-4 py-4 d-flex align-items-center justify-content-center mb-4 mb-lg-0"
             >
-            <div [class.slide-in-right]="isActive" class="card" (click)="goToProjectDetail(project)">
+            <div [class.slide-in-right]="isActiveArray[$index] && isActive" class="card" (click)="goToProjectDetail(project)">
                 <img src="{{project.image}}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">{{project.title}}</h5>
